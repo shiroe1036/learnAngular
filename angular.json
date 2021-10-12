@@ -102,5 +102,8 @@
       }
     }
   },
-  "defaultProject": "learnAngular"
+  "defaultProject": "learnAngular",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
