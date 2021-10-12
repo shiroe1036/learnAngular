@@ -13,13 +13,16 @@ import { environment } from '../environments/environment';
 import { CustomerModule } from './customer/customer.module';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
     HeroDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { MessagesComponent } from './messages/messages.component';
     FormsModule,
     StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
-    CustomerModule
+    CustomerModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
